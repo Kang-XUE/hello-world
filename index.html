@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>知识门户 Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__content">
+        <p class="hero__eyebrow">Knowledge Portal Prototype</p>
+        <h1>知识门户 Demo 原型</h1>
+        <p class="hero__desc">
+          以最轻量的方式展示提交-评审-发布、目录、检索问答与运营分析的前端视图。
+        </p>
+        <div class="hero__actions">
+          <button class="primary">创建知识</button>
+          <button class="ghost">查看流程</button>
+        </div>
+        <div class="hero__chips">
+          <span>文件级知识</span>
+          <span>自动标签</span>
+          <span>语义检索</span>
+          <span>运营分析</span>
+        </div>
+      </div>
+      <div class="hero__panel">
+        <div class="panel__header">
+          <strong>发布面板</strong>
+          <span>v2.4 · 权限：内部</span>
+        </div>
+        <ul class="panel__list">
+          <li>
+            <span>评审</span>
+            <span class="status pending">待审 2</span>
+          </li>
+          <li>
+            <span>发布</span>
+            <span class="status success">已发布</span>
+          </li>
+          <li>
+            <span>更新</span>
+            <span class="status warn">30天复审</span>
+          </li>
+          <li>
+            <span>退出</span>
+            <span class="status muted">未下架</span>
+          </li>
+        </ul>
+        <div class="panel__footer">
+          <span>上次更新：今天 09:30</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="section__title">
+          <h2>流程概览</h2>
+          <p>提交 → 预检 → 评审 → 发布 → 运营反馈</p>
+        </div>
+        <div class="flow">
+          <div class="flow__card">
+            <h3>提交</h3>
+            <p>支持多类型文件与在线编辑，自动补全元数据。</p>
+          </div>
+          <div class="flow__card">
+            <h3>评审</h3>
+            <p>并行/串行审阅、批注与意见记录。</p>
+          </div>
+          <div class="flow__card">
+            <h3>发布</h3>
+            <p>版本、权限与水印配置，可回滚。</p>
+          </div>
+          <div class="flow__card">
+            <h3>运营</h3>
+            <p>监控热点与缺口，驱动内容更新。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__title">
+          <h2>知识目录</h2>
+          <div class="tabs">
+            <button class="tab active">热门主题</button>
+            <button class="tab">专题合集</button>
+            <button class="tab">部门分类</button>
+          </div>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <h3>产品知识库</h3>
+            <p>版本路线、功能说明、FAQ。</p>
+            <div class="card__meta">更新：2024-05-12 · 148篇</div>
+          </article>
+          <article class="card">
+            <h3>交付与实施</h3>
+            <p>实施流程、模板与案例。</p>
+            <div class="card__meta">更新：2024-05-08 · 89篇</div>
+          </article>
+          <article class="card">
+            <h3>服务运营</h3>
+            <p>监控、SLA、报表标准。</p>
+            <div class="card__meta">更新：2024-05-02 · 63篇</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split">
+        <div>
+          <div class="section__title">
+            <h2>检索与问答</h2>
+            <p>关键词 + 语义混合检索，支持问答引用来源。</p>
+          </div>
+          <div class="search">
+            <input type="text" value="如何配置知识权限？" />
+            <button class="primary">搜索</button>
+          </div>
+          <div class="result">
+            <strong>推荐答案</strong>
+            <p>
+              可按角色、部门、项目与标签设置权限，并支持保密级别与水印。
+            </p>
+            <div class="result__meta">引用：权限管理规范 v2.4 · 95% 置信度</div>
+          </div>
+        </div>
+        <div class="side-panel">
+          <h3>实时指标</h3>
+          <ul>
+            <li>
+              <span>API 调用量</span>
+              <strong>12,482</strong>
+            </li>
+            <li>
+              <span>平均延迟</span>
+              <strong>286ms</strong>
+            </li>
+            <li>
+              <span>热门主题</span>
+              <strong>权限/版本</strong>
+            </li>
+            <li>
+              <span>零结果率</span>
+              <strong>3.8%</strong>
+            </li>
+          </ul>
+          <button class="ghost full">查看运营看板</button>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__title">
+          <h2>运营分析与信息收集点</h2>
+          <p>页面行为与检索数据回传，用于热点与缺口分析。</p>
+        </div>
+        <div class="grid">
+          <article class="card highlight">
+            <h3>行为埋点</h3>
+            <p>访问、点击、停留、下载、收藏、反馈。</p>
+          </article>
+          <article class="card highlight">
+            <h3>检索效果</h3>
+            <p>点击率、二次搜索率、问答命中。</p>
+          </article>
+          <article class="card highlight">
+            <h3>缺口建议</h3>
+            <p>高频无结果与重复问题提醒。</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Demo 原型仅用于需求展示 · 可接入真实API与权限系统</p>
+    </footer>
+  </body>
+</html>
