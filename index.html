@@ -8,54 +8,73 @@
   </head>
   <body>
     <header class="hero">
+      <nav class="top-nav">
+        <div class="brand">
+          <span class="brand__mark">KN</span>
+          <div>
+            <strong>知识门户</strong>
+            <p>企业知识门户</p>
+          </div>
+        </div>
+        <div class="nav-links">
+          <a class="active" href="#">首页</a>
+          <a href="#">知识资产</a>
+          <a href="#">知识问答</a>
+          <a href="#">知识运营</a>
+          <a href="#">知识体系</a>
+        </div>
+        <div class="nav-user">
+          <div class="avatar">U</div>
+          <span>用户名称</span>
+        </div>
+      </nav>
+
       <div class="hero__content">
-        <p class="hero__eyebrow">Knowledge Portal Prototype</p>
-        <h1>知识门户 Demo 原型</h1>
-        <p class="hero__desc">
-          以最轻量的方式展示提交-评审-发布、目录、检索问答与运营分析的前端视图。
-        </p>
-        <div class="hero__actions">
-          <button class="primary">创建知识</button>
-          <button class="ghost">查看流程</button>
+        <div class="hero__card">
+          <p class="hero__eyebrow">问 · 知识</p>
+          <h1>知识门户 Demo 原型</h1>
+          <p class="hero__desc">
+            以轻量方式展示提交-评审-发布、目录、检索问答与运营分析的前端视图。
+          </p>
+          <div class="hero__search">
+            <input type="text" value="请输入你的问题" />
+            <button class="primary">搜索</button>
+          </div>
+          <div class="hero__chips">
+            <span>产品</span>
+            <span>流程</span>
+            <span>客服</span>
+            <span>合规</span>
+            <span>运营</span>
+          </div>
         </div>
-        <div class="hero__chips">
-          <span>文件级知识</span>
-          <span>自动标签</span>
-          <span>语义检索</span>
-          <span>运营分析</span>
-        </div>
-      </div>
-      <div class="hero__panel">
-        <div class="panel__header">
-          <strong>发布面板</strong>
-          <span>v2.4 · 权限：内部</span>
-        </div>
-        <ul class="panel__list">
-          <li>
-            <span>评审</span>
-            <span class="status pending">待审 2</span>
-          </li>
-          <li>
-            <span>发布</span>
-            <span class="status success">已发布</span>
-          </li>
-          <li>
-            <span>更新</span>
-            <span class="status warn">30天复审</span>
-          </li>
-          <li>
-            <span>退出</span>
-            <span class="status muted">未下架</span>
-          </li>
-        </ul>
-        <div class="panel__footer">
-          <span>上次更新：今天 09:30</span>
+        <div class="hero__stats">
+          <article class="stat-card">
+            <p>总文档数量</p>
+            <strong>3,890</strong>
+            <span class="trend up">月同比 3%</span>
+          </article>
+          <article class="stat-card">
+            <p>总文字数量</p>
+            <strong>4,800,9300</strong>
+            <span class="trend down">月同比 5%</span>
+          </article>
+          <article class="stat-card">
+            <p>总条目数量</p>
+            <strong>24,6800</strong>
+            <span class="trend up">月同比 2%</span>
+          </article>
+          <article class="stat-card">
+            <p>QA 数量</p>
+            <strong>248</strong>
+            <span class="trend down">月同比 2%</span>
+          </article>
         </div>
       </div>
     </header>
 
     <main>
-      <section class="section">
+      <section class="section soft-panel">
         <div class="section__title">
           <h2>流程概览</h2>
           <p>提交 → 预检 → 评审 → 发布 → 运营反馈</p>
