@@ -17,11 +17,11 @@
           </div>
         </div>
         <div class="nav-links">
-          <a class="active" href="#">首页</a>
-          <a href="#">知识资产</a>
-          <a href="#">知识问答</a>
-          <a href="#">知识运营</a>
-          <a href="#">知识体系</a>
+          <button class="nav-link active" type="button" data-page="home">首页</button>
+          <button class="nav-link" type="button" data-page="assets">知识资产</button>
+          <button class="nav-link" type="button" data-page="qa">知识问答</button>
+          <button class="nav-link" type="button" data-page="ops">知识运营</button>
+          <button class="nav-link" type="button" data-page="system">知识体系</button>
         </div>
         <div class="nav-user">
           <div class="avatar">U</div>
@@ -29,7 +29,7 @@
         </div>
       </nav>
 
-      <div class="hero__content">
+      <div class="hero__content page active" data-page="home">
         <div class="hero__card">
           <p class="hero__eyebrow">问 · 知识</p>
           <h1>知识门户 Demo 原型</h1>
@@ -74,7 +74,7 @@
     </header>
 
     <main>
-      <section class="section soft-panel">
+      <section class="section soft-panel page active" data-page="home">
         <div class="section__title">
           <h2>流程概览</h2>
           <p>提交 → 预检 → 评审 → 发布 → 运营反馈</p>
@@ -99,7 +99,7 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section page active" data-page="home">
         <div class="section__title">
           <h2>知识目录</h2>
           <div class="tabs">
@@ -127,7 +127,7 @@
         </div>
       </section>
 
-      <section class="section split">
+      <section class="section split page active" data-page="home">
         <div>
           <div class="section__title">
             <h2>检索与问答</h2>
@@ -169,7 +169,7 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section page active" data-page="home">
         <div class="section__title">
           <h2>运营分析与信息收集点</h2>
           <p>页面行为与检索数据回传，用于热点与缺口分析。</p>
@@ -189,10 +189,168 @@
           </article>
         </div>
       </section>
+
+      <section class="section page" data-page="assets">
+        <div class="section__title">
+          <h2>知识资产概览</h2>
+          <p>统一管理文档、FAQ、流程与多媒体知识资产。</p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <h3>资产盘点</h3>
+            <p>按业务线、部门、标签聚合统计与重复度分析。</p>
+            <div class="card__meta">覆盖 12 个部门 · 89% 完整度</div>
+          </article>
+          <article class="card">
+            <h3>版本与权限</h3>
+            <p>支持版本对比、权限水印、历史归档。</p>
+            <div class="card__meta">最近 7 天更新 38 条</div>
+          </article>
+          <article class="card">
+            <h3>内容健康度</h3>
+            <p>过期提醒、缺口提示、质量评分。</p>
+            <div class="card__meta">高风险 6 条 · 待复审 14 条</div>
+          </article>
+        </div>
+        <div class="dual">
+          <div class="panel">
+            <h3>资产看板</h3>
+            <ul>
+              <li>文档类：2,430</li>
+              <li>FAQ：380</li>
+              <li>流程模板：120</li>
+              <li>视频素材：68</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>关键动作</h3>
+            <div class="action-list">
+              <button class="ghost">批量导入</button>
+              <button class="primary">新建知识</button>
+              <button class="ghost">导出清单</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section page" data-page="qa">
+        <div class="section__title">
+          <h2>知识问答中心</h2>
+          <p>面向员工或客户的搜索与问答体验。</p>
+        </div>
+        <div class="qa-layout">
+          <div class="panel">
+            <h3>问答输入</h3>
+            <div class="search wide">
+              <input type="text" value="如何快速生成知识摘要？" />
+              <button class="primary">提问</button>
+            </div>
+            <div class="result">
+              <strong>系统建议</strong>
+              <p>
+                可通过模型自动提炼短摘要与长摘要，并对低置信度结果提示复核。
+              </p>
+              <div class="result__meta">引用：摘要生成指南 · 94% 置信度</div>
+            </div>
+          </div>
+          <div class="panel">
+            <h3>热门问答</h3>
+            <ul class="list">
+              <li>权限策略怎么配置？</li>
+              <li>版本回滚的流程是什么？</li>
+              <li>如何设置知识有效期？</li>
+              <li>标签体系如何更新？</li>
+              <li>问答命中率怎么提升？</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section page" data-page="ops">
+        <div class="section__title">
+          <h2>知识运营看板</h2>
+          <p>监控 API 调用、检索效果与热点趋势。</p>
+        </div>
+        <div class="grid">
+          <article class="card highlight">
+            <h3>调用监控</h3>
+            <p>QPS、延迟、错误率与模型成本。</p>
+            <div class="card__meta">当前延迟 286ms · 错误率 0.3%</div>
+          </article>
+          <article class="card highlight">
+            <h3>检索效果</h3>
+            <p>点击率、零结果率、二次搜索率。</p>
+            <div class="card__meta">点击率 68% · 零结果 3.8%</div>
+          </article>
+          <article class="card highlight">
+            <h3>热点趋势</h3>
+            <p>热门主题、增长趋势与缺口建议。</p>
+            <div class="card__meta">热门：权限/版本 · 缺口 5 条</div>
+          </article>
+        </div>
+        <div class="panel">
+          <h3>运营动作建议</h3>
+          <div class="pill-list">
+            <span>补齐“权限策略”FAQ</span>
+            <span>更新“版本回滚”流程</span>
+            <span>新增“客户自助”专题</span>
+            <span>优化低命中标签</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section page" data-page="system">
+        <div class="section__title">
+          <h2>知识体系建设</h2>
+          <p>以分类、标签与主题构建企业知识体系。</p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <h3>分类树</h3>
+            <p>支持多级分类与专题知识树。</p>
+            <div class="card__meta">共 6 大类 · 24 子类</div>
+          </article>
+          <article class="card">
+            <h3>标签体系</h3>
+            <p>同义词管理与禁用词清单。</p>
+            <div class="card__meta">活跃标签 320 · 待审核 12</div>
+          </article>
+          <article class="card">
+            <h3>质量标准</h3>
+            <p>模板、规范、字段校验与评分。</p>
+            <div class="card__meta">评分达标率 86%</div>
+          </article>
+        </div>
+        <div class="panel">
+          <h3>体系蓝图</h3>
+          <div class="tree">
+            <div>产品知识</div>
+            <div>交付实施</div>
+            <div>服务运营</div>
+            <div>合规与安全</div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
       <p>Demo 原型仅用于需求展示 · 可接入真实API与权限系统</p>
     </footer>
+    <script>
+      const navLinks = document.querySelectorAll(".nav-link");
+      const pages = document.querySelectorAll(".page");
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          const target = link.dataset.page;
+          navLinks.forEach((item) => item.classList.remove("active"));
+          link.classList.add("active");
+          pages.forEach((page) => {
+            page.classList.toggle("active", page.dataset.page === target);
+          });
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      });
+    </script>
   </body>
 </html>
